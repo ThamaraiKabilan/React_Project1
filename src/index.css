@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --bg-home: #ff9a9e;
+  --bg-products: #a18cd1;
+  --bg-service: #f6d365;
+  --bg-students: #5ee7df;
+  --bg-portfolio: #cfd9df;
+  --bg-props: #b490ca;
+  --bg-counter: #fad0c4;
+  --bg-toggle: #fda085;
+
+  --text-color: #000;
+  --card-bg: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body.dark {
+  --bg-home: #2c3e50;
+  --bg-products: #34495e;
+  --bg-service: #1a252f;
+  --bg-students: #2c3e50;
+  --bg-portfolio: #34495e;
+  --bg-props: #1a252f;
+  --bg-counter: #2c3e50;
+  --bg-toggle: #34495e;
+
+  --text-color: #f5f5f5;
+  --card-bg: #2c3e50;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* background colors per page */
+.home-bg { background-color: var(--bg-home); }
+.products-bg { background-color: var(--bg-products); }
+.service-bg { background-color: var(--bg-service); }
+.clients-bg { background-color: var(--bg-students); }
+.portfolio-bg { background-color: var(--bg-portfolio); }
+.props-bg { background-color: var(--bg-props); }
+.counter-bg { background-color: var(--bg-counter); }
+.toggle-bg { background-color: var(--bg-toggle); }
+
+.student-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* ensure text visible in dark mode */
+.page *,
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page p,
+.page span,
+.page div {
+  color: var(--text-color) !important;
 }
